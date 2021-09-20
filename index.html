@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Font awesome library for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <title>Braai Masters Community</title>
+</head>
+<body onload="chatbotOptions(); showNavi();"> 
+
+    <!-- Header -->
+    <header class="main-header" id="mainHeader">
+
+        <!-- Site logo -->
+        <a href="index.html" class="main-header_logo">
+            <h1>
+                <img class="main-logo" src="Assets/braaiMastersLogo.jpg" alt="Websites Logo">
+                <span>
+                    Braai Masters<br>
+                </span>
+            </h1>
+        </a>
+        
+<!--    Hidden button for when site is viewed on smaller device-->
+        <button class="main-header_nav_button" id="naviButton">&#9776;</button>
+<!--    Navigation Bar    -->
+        <nav class="main-header_nav" id="naviBar">
+            <ul id="naviUl">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="our-offering.html">Our Offering</a>
+                </li>
+                <li>
+                    <a href="gallery.html">Gallery</a>
+                </li>
+                <li>
+                    <a href="faqs.html">Contact us/FAQ's</a>
+                </li>
+                <li>
+                    <a href="join-us.html">Join us</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    
+    <!-- Landing Body background image -->
+    <section class="landing-body">
+        <img src="Assets/tower-pano.jpg" alt="Panoramic Shot of the Destiny 2 Tower">
+    </section>
+
+    <!-- Latest news Section-->
+    <section class="server-breakdown">
+        <h2>We Are The BraaiMasters</h2>
+        <!-- Three descriptive cards -->
+        <div class="info-card-container">
+            <div class="info-card">
+                <h3>Who we are:</h3>
+                <p>The endless night, we were all there to see it, smelt it, and felt its icy grip around our throats. We had to endure it alone, surrounded by hostiles and all out of ammo - without anyone to cover our rear. It was a dark time.<br> Out of this night, ascended a firey, glowing group of individuals who called themselves the Braai Masters. They broke the darkness, tamed the cold, dispursed the enemies in a sudden flash, and brought tonnes of ammo. For the first time, light tore through the veil of clouds, and the Last City, which we call home, was golden again.<br> The last defenders of unity and formailty in the Gaming Community, the Guardians of Light.</p>
+            </div>
+
+            <div class="info-card">
+                <h3>What we stand for:</h3>
+                <p>
+                    Our community is a family focused gaming community.
+                    This means zero profanity, zero toxicity, and a wholesome approach to community fun.
+                    This is not for everyone, as many gamers enjoy their right to let the ‘F bombs’ fly, ‘T-Bag’ each other and many other adult themed expressions of fun. The majority of gaming communities out there cater for that culture.
+                    Our community is a place where those who are more conservative by nature can laugh and have fun into the early hours of the morning without fear of sexual harassment, cyber bullying, narcissism, gas lighting, or any other form of inconsiderate behavior.
+                    We are community with hundreds of members who enjoy this considerate atmosphere and we invite you to join our discord community and be a part of our growing family!
+                </p>
+            </div>
+
+            <div class="info-card">
+                <h3>What we play:</h3>
+                <p>Our taste buds for gaming are seldom satified with one flavour. How could we live contently if we knew that there were so many flavours to try? That is why we never keep our vision too narrow. On our server, you will find people that love playing all sorts of games. Our main indulgence is Destiny 2, most of our players are extremely passionate about this looty-shooty game, and they feel open enough to constantly coordinate about it - sharing in-game screenshots of their god-role weapons, breathetaking view (which you will find in the gallery) and glorious in game moments. It is the game that brings most players to our server, but our players also love games like Call of Duty, Battlefield, World of Warcraft, and many more. We have a shoe for every foot.</p>
+            </div>
+        </div>
+    </section>
+    
+
+
+    <!-- Chatbot hanger --> 
+    <div class="chatbot" id="chatbot">
+    <!-- Chatbot Gif-->
+        <img class="chatbot-ghost" src="Assets/gifs/destiny-ghost-gif.gif" alt="Your Cute Chatbot - Ghost">
+    <!-- Floating footer with options-->
+        <footer class="fixed-footer" id="fixed-footer">
+            <div class="fixed-footer-content sb5" id="fixed-footer-content">Welcome Guardian! If you have any questions, I'm here to help!
+                <!-- Chatbot options, expand, help and minimize respectively -->
+                <i class="fa fa-toggle-off" id="options-button"></i>
+                <a href="faqs.html"><i class="fa" id="contact-button">&#xf128;</i></a>
+                <i class="fa" id="minimize-button">&#xf039;</i>
+            </div>
+        </footer>
+    </div>
+    <!-- Minimized version of the footer -->
+    <footer class="minimized-footer" id="minimizeFooter">
+        <i class="fa" id="expand-button">&#xf039;</i>
+    </footer>
+    
+    <!-- Expanded version of the footer, with different text and options, minizing options, help, minimize footer, normal font size, enlarged font size, light mode and dark mode respectively -->
+    <footer class="full-footer" id="fullFooter">
+        <div class="full-footer-content sb5" id="full-footer-content">These are all my options : Feel free to change the font size and color!
+                <i class="fa fa-toggle-off" id="minimizeOptionsButton"></i>
+                <a href="faqs.html"><i class="fa" id="contact-button">&#xf128;</i></a>
+                <i class="fa" id="fullMinimizeButton">&#xf039;</i>
+                <i class="fa fa-font" style="font-size:16px" id="smallFontButton"></i>
+                <i class="fa fa-font" style="font-size:34px" id="largeFontButton"></i>
+                <i class="fa fa-file-text" style="font-size:20px" id="lightModeButton"></i>
+                <i class="fa fa-file-text-o" style="font-size:20px" id="darkModeButton"></i>
+        </div>
+    </footer>
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Social Media Links -->
+        <div class="footer-socials">
+            <a href="https://www.facebook.com/braaimastersclan" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="https://www.youtube.com/channel/UCnoktFR_upTYCGLwPIbIfag/featured" class="fa fa-youtube"></a>
+        </div>
+        <p>-WEB DEV-CM1040-KEEAN FERREIRA-</p>
+        <p>LOOT, SHOOT & TOOT!</p>
+    </footer>
+
+    <!-- Main script -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>

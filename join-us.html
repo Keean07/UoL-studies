@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Font awesome library for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <title>Braai Masters Community</title>
+</head>
+<body onload="chatbotOptions(); showNavi();">
+
+    <!-- Header -->
+    <header class="main-header" id="mainHeader">
+
+        <!-- Site logo -->
+        <a href="index.html" class="main-header_logo">
+            <h1>
+                <img class="main-logo" src="Assets/braaiMastersLogo.jpg" alt="Websites Logo">
+                <span>
+                    Braai Masters<br>
+                </span>
+            </h1>
+        </a>
+        
+<!--    Hidden button for when site is viewed on smaller device-->
+        <button class="main-header_nav_button" id="naviButton">&#9776;</button>
+<!--    Navigation Bar    -->
+        <nav class="main-header_nav" id="naviBar">
+            <ul id="naviUl">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="our-offering.html">Our Offering</a>
+                </li>
+                <li>
+                    <a href="gallery.html">Gallery</a>
+                </li>
+                <li>
+                    <a href="faqs.html">Contact us/FAQ's</a>
+                </li>
+                <li>
+                    <a href="join-us.html">Join us</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    
+    <!-- Invitation Section containing embedded Facebook videos-->
+    <section class="invitation-container">
+        <div class="invitation-header">
+            <h2> If you want to be apart of something bigger,<br> something that looks like this: </h2>
+        </div>
+        <!-- Here is the container with the embedded videos -->
+        <div class="embedded-video-container">
+            <div class="top-embed">
+                <iframe class="embedded-video" src="https://www.facebook.com/plugins/video.php?height=236&href=https%3A%2F%2Fwww.facebook.com%2Fbraaimastersclan%2Fvideos%2F452467828652589%2F&show_text=true&width=560&t=0" style="border:none;" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share;"></iframe>
+                <iframe class="embedded-video" src="https://www.facebook.com/plugins/video.php?height=236&href=https%3A%2F%2Fwww.facebook.com%2Fbraaimastersclan%2Fvideos%2F2249852515135151%2F&show_text=true&width=560&t=0" style="border:none;" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share;"></iframe>
+                <iframe class="embedded-video" src="https://www.facebook.com/plugins/video.php?height=236&href=https%3A%2F%2Fwww.facebook.com%2Fbraaimastersclan%2Fvideos%2F2384570885122251%2F&show_text=true&width=560&t=0" style="border:none;" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share;"></iframe>
+            </div>
+            <div class="invitation-header">
+                <h2>Then come join us on Discord!</h2>
+            </div>
+            <!-- Here I have a descriptive piece written in accordance to the image next to it, that is somewhat explanatory as to what to expect when joining the server -->
+            <div class="guiding-container">
+                <div class="guiding-info">
+                    <div class="info-card">
+                        <h3>Upon joining us, you will be met with something that looks a little like this:</h3>
+                        <p>Firstly, here is your portal to travel directly to the Discord server, where you can immediately get started on your setup.<br><br>This "setup" is a quick process that involves you reading all the server rules, introducing yourself, getting assigned a specific clan, and then selecting your appropriate user tags.<br><br>Your clan is simply dependant on the volume each clan currently has to keep things balanced, and your tags are at your own discretion - they include what games you play, and what you play on. If you already have experience in Destiny specifically, you will be able to link your Bungie account to the server, allowing it to display your experience in categories like Raids and the Crucible. You'll quickly notice who the more Veteran players are..</p>
+                    </div>
+                    <iframe class="discord-embed" src="https://discord.com/widget?id=349969420803637248&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+                </div>
+                <img class="guiding-image" src="Assets/Discord-Screenshots/discord-channel.png" alt="An image that displays what a user sees fater having joined the server">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Chatbot hanger -->
+        
+    <div class="chatbot" id="chatbot">
+    <!-- Chatbot Gif-->
+        <img class="chatbot-ghost" src="Assets/gifs/destiny-ghost-gif.gif" alt="Your Cute Chatbot - Ghost">
+    <!-- Floating footer with options-->
+        <footer class="fixed-footer" id="fixed-footer">
+            <div class="fixed-footer-content sb5" id="fixed-footer-content">Welcome Guardian! If you have any questions, I'm here to help!
+                <!-- Chatbot options, expand, help and minimize respectively -->
+                <i class="fa fa-toggle-off" id="options-button"></i>
+                <a href="faqs.html"><i class="fa" id="contact-button">&#xf128;</i></a>
+                <i class="fa" id="minimize-button">&#xf039;</i>
+            </div>
+        </footer>
+    </div>
+    <!-- Minimized version of the footer -->
+    <footer class="minimized-footer" id="minimizeFooter">
+        <i class="fa" id="expand-button">&#xf039;</i>
+    </footer>
+    
+    <!-- Expanded version of the footer, with different text and options, minizing options, help, minimize footer, normal font size, enlarged font size, light mode and dark mode respectively -->
+    <footer class="full-footer" id="fullFooter">
+        <div class="full-footer-content sb5" id="full-footer-content">These are all my options : Feel free to change the font size and color!
+                <i class="fa fa-toggle-off" id="minimizeOptionsButton"></i>
+                <a href="faqs.html"><i class="fa" id="contact-button">&#xf128;</i></a>
+                <i class="fa" id="fullMinimizeButton">&#xf039;</i>
+                <i class="fa fa-font" style="font-size:16px" id="smallFontButton"></i>
+                <i class="fa fa-font" style="font-size:34px" id="largeFontButton"></i>
+                <i class="fa fa-file-text" style="font-size:20px" id="lightModeButton"></i>
+                <i class="fa fa-file-text-o" style="font-size:20px" id="darkModeButton"></i>
+        </div>
+    </footer>
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Social Media Links -->
+        <div class="footer-socials">
+            <a href="https://www.facebook.com/braaimastersclan" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="https://www.youtube.com/channel/UCnoktFR_upTYCGLwPIbIfag/featured" class="fa fa-youtube"></a>
+        </div>
+        <p>-WEB DEV-CM1040-KEEAN FERREIRA-</p>
+        <p>LOOT, SHOOT & TOOT!</p>
+    </footer>
+
+    <!-- Main script -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>

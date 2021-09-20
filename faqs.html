@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Font awesome library for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <title>Braai Masters Community</title>
+</head>
+<body onload="chatbotOptions(); showNavi();">
+
+    <!-- Header -->
+    <header class="main-header" id="mainHeader">
+
+        <!-- Site logo -->
+        <a href="index.html" class="main-header_logo">
+            <h1>
+                <img class="main-logo" src="Assets/braaiMastersLogo.jpg" alt="Websites Logo">
+                <span>
+                    Braai Masters<br>
+                </span>
+            </h1>
+        </a>
+        
+<!--    Hidden button for when site is viewed on smaller device-->
+        <button class="main-header_nav_button" id="naviButton">&#9776;</button>
+<!--    Navigation Bar    -->
+        <nav class="main-header_nav" id="naviBar">
+            <ul id="naviUl">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="our-offering.html">Our Offering</a>
+                </li>
+                <li>
+                    <a href="gallery.html">Gallery</a>
+                </li>
+                <li>
+                    <a href="faqs.html">Contact us/FAQ's</a>
+                </li>
+                <li>
+                    <a href="join-us.html">Join us</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    
+    <!-- The FAQ's section, I implemented this code from my mid-term assignment -->
+    <div class="FAQ-options">
+        <h2 class="FAQ-heading">Frequently Asked Questions</h2>
+        <!-- Here we have dropdown menus with frequently asked about topics (links deliberately lead nowhere)-->
+        <div class="dropMenu-container">
+            <div class ="dropMenu">
+                <button class="dropButton"><span class="dropButton-span">Different Clans</span></button>
+                <div class ="dropdown-content">
+                    <a href="#">Why so many clans?</a>
+                    <a href="#">Which clan will I be apart of?</a>
+                    <a href="#">Should I have a preferrence?</a>
+                </div>
+            </div>
+
+            <div class = "dropMenu">
+                <button class="dropButton"><span class="dropButton-span">Organized Events</span></button>
+                <div class ="dropdown-content">
+                    <a href="#">Organized Raids</a>
+                    <a href="#">PvP Competitions</a>
+                    <a href="#">Event Rules</a>
+                </div>
+            </div>
+
+            <div class = "dropMenu">
+                <button class="dropButton"><span class="dropButton-span">Technical Support</span></button>
+                <div class ="dropdown-content">
+                    <a href="#">Issues with Joining Server</a>
+                    <a href="#">Not receiving my invitation</a>
+                    <a href="#">Does my PC have the spec required to game?</a>
+                </div>
+            </div> 
+            <div class = "dropMenu">
+                <button class="dropButton"><span class="dropButton-span">Guided Experiences</span></button>
+                <div class ="dropdown-content">
+                    <a href="#">First Time Raiders</a>
+                    <a href="#">Dungeon Walkthroughs</a>
+                    <a href="#">How to break the ice of isolation?</a>
+                </div>
+            </div> 
+        </div>
+    </div>
+    
+<!-- This is a contact form, with input boxes for the user to fill in their details -->
+    <div class="FAQ-contact">
+        <div class="FAQ-entryform">
+            <h2 class="FAQ-contact_heading">Contact us:</h2>
+            <form>
+            <!-- Labels and input boxes -->
+            <label for="firstName" class="form-label">First name:</label><br>
+                <input type="text" id="firstName" name="firstName" placeholder="Your name.."><br>
+
+            <label for="lastName" class="form-label">Last name:</label><br>
+                <input type="text" id="lastName" name="lastName" placeholder="Your surname.."><br>
+
+            <label for="emailAddress" class="form-label">Email:</label><br>
+                <input type="text" id="emailAddress" name="emailAddress" placeholder="Your email address.."><br>
+
+            <label for="cellNum" class="form-label">Cellphone Number:</label><br>
+                <input type="text" id="cellNum" name="cellNum" placeholder="Your cellphone number"><br>
+
+            <label for="message" class="form-label">Message:</label><br>
+                <textarea id="message" name="message"></textarea><br>
+
+            <input type="submit" value="Submit">
+            </form> 
+        </div>
+        <!-- Here we have the links to our social platforms in a list form -->
+        <div class="FAQ-Socials">
+            <h2 class="FAQ-contact_heading">Find us on Social Media:</h2>
+                <ul>
+                    <li class="FAQ-list-entry">Facebook: <a href="https://www.facebook.com/braaimastersclan" class="socialsLinks">Click Here</a></li>
+                    <li class="FAQ-list-entry">YouTube: <a href="https://www.youtube.com/channel/UCnoktFR_upTYCGLwPIbIfag" class="socialsLinks">Click Here</a></li>
+                    <li class="FAQ-list-entry">Steam Group: <a href="https://steamcommunity.com/groups/braaimasters" class="socialsLinks">Click Here</a></li>
+                    <li class="FAQ-list-entry">Blizzard Group: <a href="https://blizzard.com/invite/ax0yRmSnRl" class="socialsLinks">Click Here</a></li>
+                </ul>
+        </div>
+        <!-- Here we have a descriptive piece regarding the "Motto" that the clan has towards newcommers -->
+        <div class="FAQ-Motto">
+            <h2 class="FAQ-contact_heading">Our motto towards newcomers:</h2>
+            <p1 class="FAQ-p">Guardian, we've seen the furthest reachest of the galaxy, we've touched both the light and the dark and prevailed through both. <br><br>With that being said, we understand that sometimes the darkest places can reside within ourselves - and our most powerful enemy can often be fear.<br><br>We know that not everyone is comfortable with sharing their voice. Some people need extra time, others need some motivation, but regardless of who you are or what you need, we are prepared to walk with you, in whichever way you feel most comfortable, until the day comes that you are ready to show the world your face.<br><br>At the end of the day, the most important thing to us is that all players get to experience the richness of a gaming community where they feel safe and accepted.<br><br>Once that feeling of security sinks in, we can begin to enjoy all aspects of gaming that was once unreachable to us.<br><br> So reach out, join us, let us fight, guardian. We are stronger together.</p1>
+        </div>
+    </div>
+    <!-- Here we have a media based section that has a centered gif themed to the group (not created by me, got it on Google) -->
+    <div class="FAQ-ender">
+        <img class="FAQ-ender_image" src="Assets/gifs/hunter-titan-warlock-gif.gif" alt="Destiny Charater Archetype gif (artwork not by me)">
+        <div class="FAQ-ender_text">
+            <!-- I have implemented a piece of HTML that is not original to me, I saw it online a long time ago and no longer have the reference. It uses CSS to style <span> elements so that they bounce up and down -->
+            <div class="waves">
+                <span style="--i:1">T</span>
+                <span style="--i:2">H</span>
+                <span style="--i:3">E</span>
+                <span style="--i:4"></span>
+                <span style="--i:5">B</span>
+                <span style="--i:6">A</span>
+                <span style="--i:7">T</span>
+                <span style="--i:8">T</span>
+                <span style="--i:9">L</span>
+                <span style="--i:10">E</span>
+                <span style="--i:11">F</span>
+                <span style="--i:12">I</span>
+                <span style="--i:13">E</span>
+                <span style="--i:14">L</span>
+                <span style="--i:15">D</span>
+                <span style="--i:16"> </span>
+                <span style="--i:17">A</span>
+                <span style="--i:18">W</span>
+                <span style="--i:19">A</span>
+                <span style="--i:20">I</span>
+                <span style="--i:21">T</span>
+                <span style="--i:22">S</span>
+                <span style="--i:23">!</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Chatbot hanger -->        
+    <div class="chatbot" id="chatbot">
+    <!-- Chatbot Gif-->
+        <img class="chatbot-ghost" src="Assets/gifs/destiny-ghost-gif.gif" alt="Your Cute Chatbot - Ghost">
+    <!-- Floating footer with options-->
+        <footer class="fixed-footer" id="fixed-footer">
+            <div class="fixed-footer-content sb5" id="fixed-footer-content">Welcome Guardian! If you have any questions, I'm here to help!
+                <!-- Chatbot options, expand, help and minimize respectively -->
+                <i class="fa fa-toggle-off" id="options-button"></i>
+                <a href="faqs.html"><i class="fa" id="contact-button">&#xf128;</i></a>
+                <i class="fa" id="minimize-button">&#xf039;</i>
+            </div>
+        </footer>
+    </div>
+    <!-- Minimized version of the footer -->
+    <footer class="minimized-footer" id="minimizeFooter">
+        <i class="fa" id="expand-button">&#xf039;</i>
+    </footer>
+    
+    <!-- Expanded version of the footer, with different text and options, minizing options, help, minimize footer, normal font size, enlarged font size, light mode and dark mode respectively -->
+    <footer class="full-footer" id="fullFooter">
+        <div class="full-footer-content sb5" id="full-footer-content">These are all my options : Feel free to change the font size and color!
+                <i class="fa fa-toggle-off" id="minimizeOptionsButton"></i>
+                <a href="faqs.html"><i class="fa" id="contact-button">&#xf128;</i></a>
+                <i class="fa" id="fullMinimizeButton">&#xf039;</i>
+                <i class="fa fa-font" style="font-size:16px" id="smallFontButton"></i>
+                <i class="fa fa-font" style="font-size:34px" id="largeFontButton"></i>
+                <i class="fa fa-file-text" style="font-size:20px" id="lightModeButton"></i>
+                <i class="fa fa-file-text-o" style="font-size:20px" id="darkModeButton"></i>
+        </div>
+    </footer>
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Social Media Links -->
+        <div class="footer-socials">
+            <a href="https://www.facebook.com/braaimastersclan" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="https://www.youtube.com/channel/UCnoktFR_upTYCGLwPIbIfag/featured" class="fa fa-youtube"></a>
+        </div>
+        <p>-WEB DEV-CM1040-KEEAN FERREIRA-</p>
+        <p>LOOT, SHOOT & TOOT!</p>
+    </footer>
+
+    <!-- Main script -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>
