@@ -1,0 +1,11 @@
+Example commands:
+
+help
+help avg
+prod
+min ETH/BTC ask
+max ETH/BTC ask
+avg ETH/BTC ask 10
+predict max ETH/BTC bid
+time
+step
