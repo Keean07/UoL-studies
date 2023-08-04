@@ -13,7 +13,8 @@ public: // for cppunit testing purposes
     unsigned int heap_size; //the size of the heap
 public:
     Heap(unsigned int);
-    Heap(std::vector<int>, bool = false);
+    Heap(bool = false);
+    std::vector<int> getNumbers();
     void insert(int);
     int maximum();
     void maxHeapify(int);

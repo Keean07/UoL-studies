@@ -1,6 +1,10 @@
 #include "Heap.hpp"
 #include <iostream>
 #include <cmath>
+#include <string>
+#include <vector>
+#include <sstream>
+#include <iterator>
 
 unsigned int parent(unsigned int i) {
     return floor(i/2);
@@ -20,8 +24,10 @@ Heap::Heap(unsigned int len) {
     // std::cout << "New heap created of length: " << array.size() << std::endl;
 }
 
-Heap::Heap(std::vector<int> source, bool incremental) {
+Heap::Heap(bool incremental) {
     // array.resize(source.size());
+    std::vector<int> source = getNumbers();
+
     heap_size = 0;
 
     if (incremental) {
@@ -33,10 +39,17 @@ Heap::Heap(std::vector<int> source, bool incremental) {
     } else {
 
     }
+}
 
-    // array.pop_back();
-    // array.push_back(7);
-    // array.push_back(8);
+std::vector<int> Heap::getNumbers(){
+    std::string myString;
+    std::cout << "Please enter numbers to sort (e.g. '5 4 3 2 10'): " << std::endl;
+    std::getline(std::cin, myString);
+
+    std::stringstream lineStream(myString);
+    std::vector<int> myVec(std::istream_iterator<int>(lineStream),{});
+
+    return myVec;
 }
 
 void Heap::insert(int k) {
@@ -110,10 +123,12 @@ void Heap::selectMaxHeapify(int i, int end) {
 }
 
 void Heap::showHeap() {
+
     std::cout << "Current Heap: "<< std::endl;
     for (int i = 0; i < array.size(); i++) {
-        std::cout << array[i] << std::endl;
+        std::cout << array[i] << ' ';
     }
+    std::cout << std::endl;
 }
 
 int Heap::getLargestChild(int i) {
